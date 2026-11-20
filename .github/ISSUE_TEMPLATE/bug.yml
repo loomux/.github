@@ -1,0 +1,54 @@
+name: Bug report
+description: Something in Loomux doesn't work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please **don't** report a security problem here: follow the repository's SECURITY.md instead.
+        Before you paste logs or screenshots, take out tokens, passwords, host names and anything else private.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, and what Loomux did.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to make it happen again
+      description: The smallest set of steps you know of. Say if it happens every time.
+      placeholder: |
+        1. …
+        2. …
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Versions
+      description: This client's version, and the server's (what `GET /api/v1/version` answers).
+      placeholder: "server 0.4.0 (web 0.3.39)"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Where you saw it
+      description: Browser or terminal, operating system, and anything else that seems to matter.
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Redact secrets first.
+    validations:
+      required: false
